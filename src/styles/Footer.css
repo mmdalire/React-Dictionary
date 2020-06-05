@@ -1,0 +1,21 @@
+footer {
+  height: 10%;
+  background-color: rgb(43, 56, 86);
+  padding: 0 10px;
+  color: white;
+  display: flex;
+}
+
+.footer-content {
+  padding: 15px 0;
+}
+
+.footer-detailed-container {
+  display: flex;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
