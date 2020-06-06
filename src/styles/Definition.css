@@ -1,0 +1,14 @@
+@import url("../styles/App.css");
+
+.Definition {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#label {
+  color: var(--class-component-primary);
+}
+
+#highlight {
+  font-style: italic;
+}

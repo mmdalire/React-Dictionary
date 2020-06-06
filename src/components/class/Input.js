@@ -20,7 +20,7 @@ class Input extends Component {
   render() {
     return (
       <div className="Input">
-        <i class="fas fa-search" id="search-logo"></i>
+        <i className="fas fa-search" id="search-logo"></i>
         <input
           type="text"
           placeholder="Search keyword"

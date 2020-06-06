@@ -1,6 +1,8 @@
+@import url("../styles/App.css");
+
 footer {
   height: 10%;
-  background-color: rgb(43, 56, 86);
+  background-color: var(--class-component-primary);
   padding: 0 10px;
   color: white;
   display: flex;

@@ -10,8 +10,13 @@ class FooterDetailed extends Component {
       width: "200px",
     };
 
-    if (type === "Class component") preset["backgroundColor"] = "lightblue";
-    else preset["backgroundColor"] = "darkred";
+    if (type === "Class component") {
+      preset["backgroundColor"] = "var(--class-component-secondary)";
+      preset["color"] = "var(--class-component-primary)";
+    } else {
+      preset["backgroundColor"] = "var(--function-component-secondary)";
+      preset["color"] = "var(--function-component-primary)";
+    }
 
     return preset;
   }

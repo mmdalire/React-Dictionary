@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+:root {
+  --class-component-primary: rgb(43, 56, 86);
+  --class-component-secondary: lightblue;
+  --function-component-primary: darkred;
+  --function-component-secondary: pink;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,3 +1,5 @@
+@import url("./App.css");
+
 .Input {
   margin: 20px 0;
   display: flex;
@@ -6,7 +8,7 @@
 
 #search-logo {
   margin-top: 5px;
-  color: rgb(43, 56, 86);
+  color: var(--class-component-primary);
   padding-top: 3px;
 }
 
@@ -14,28 +16,28 @@ input {
   padding: 5px;
   margin: 0 10px;
   border: none;
-  border-bottom: 2px solid rgb(43, 56, 86);
+  border-bottom: 2px solid var(--class-component-primary);
   background-color: transparent;
   outline: none;
 }
 
 ::placeholder {
-  color: rgb(43, 56, 86);
+  color: var(--class-component-primary);
 }
 
 #submit {
   background-color: transparent;
-  color: rgb(43, 56, 86);
+  color: var(--class-component-primary);
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 0;
-  border: 2px solid rgb(43, 56, 86);
+  border: 2px solid var(--class-component-primary);
   padding: 5px 10px;
   cursor: pointer;
   transition: 0.5s background-color;
 }
 
 #submit:hover {
-  background-color: rgb(43, 56, 86);
+  background-color: var(--class-component-primary);
   color: white;
 }
