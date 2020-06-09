@@ -4,7 +4,6 @@ import "../../styles/MainWord.css";
 class MainWord extends Component {
   render() {
     const { word, figureOfSpeech } = this.props;
-
     return (
       <div className="MainWord">
         <h1 id="output-word">{word}</h1>

@@ -2,5 +2,7 @@
 
 .Output {
   background-color: var(--class-component-secondary);
-  padding: 10px 0;
+  padding: 10px;
+  height: 270px;
+  overflow-y: auto;
 }

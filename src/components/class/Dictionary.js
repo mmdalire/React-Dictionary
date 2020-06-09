@@ -9,7 +9,7 @@ class Dictionary extends Component {
   constructor() {
     super();
     this.state = {
-      dictionary: Default,
+      dictionary: Default.info,
     };
   }
 

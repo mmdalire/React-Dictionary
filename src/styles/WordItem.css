@@ -1,0 +1,10 @@
+@import url("../styles/App.css");
+
+.WordItem {
+  padding: 10px 0;
+  border-bottom: 2px solid var(--class-component-primary);
+}
+
+.WordItem:last-child {
+  border-bottom: none;
+}

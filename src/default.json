@@ -1,218 +1,569 @@
 {
-  "meta": {
-    "id": "voluminous",
-    "uuid": "0d01b967-971f-4ec5-8fe0-10513d29c39b",
-    "sort": "220130400",
-    "src": "collegiate",
-    "section": "alpha",
-    "stems": [
-      "voluminous",
-      "voluminously",
-      "voluminousness",
-      "voluminousnesses"
-    ],
-    "offensive": false
-  },
-  "hwi": {
-    "hw": "vo*lu*mi*nous",
-    "prs": [
-      {
-        "mw": "v\u0259-\u02c8l\u00fc-m\u0259-n\u0259s",
-        "sound": {
-          "audio": "volumi02",
-          "ref": "c",
-          "stat": "1"
-        }
-      }
-    ]
-  },
-  "fl": "adjective",
-  "def": [
+  "info": [
     {
-      "sseq": [
-        [
-          [
-            "sense",
+      "meta": {
+        "id": "die:1",
+        "uuid": "bcc7d943-d489-4b82-b9e6-0d866da79381",
+        "sort": "041982000",
+        "src": "collegiate",
+        "section": "alpha",
+        "stems": [
+          "die",
+          "die hard",
+          "die on the vine",
+          "die on the vines",
+          "died",
+          "died hard",
+          "died on the vine",
+          "died on the vines",
+          "dies",
+          "dies hard",
+          "dies on the vine",
+          "dying",
+          "dying hard",
+          "dying on the vine",
+          "dying on the vines",
+          "to die for"
+        ],
+        "offensive": false
+      },
+      "hom": 1,
+      "hwi": {
+        "hw": "die",
+        "prs": [
+          {
+            "mw": "ˈdī",
+            "sound": { "audio": "die00001", "ref": "c", "stat": "1" }
+          }
+        ]
+      },
+      "fl": "verb",
+      "ins": [
+        { "if": "died" },
+        {
+          "if": "dy*ing",
+          "prs": [
             {
-              "sn": "1 a",
-              "dt": [
+              "mw": "ˈdī-iŋ",
+              "sound": { "audio": "die00002", "ref": "c", "stat": "1" }
+            }
+          ]
+        }
+      ],
+      "def": [
+        {
+          "vd": "intransitive verb",
+          "sseq": [
+            [
+              [
+                "sense",
+                {
+                  "sn": "1",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}to pass from physical life {bc}{sx|expire||} "
+                    ],
+                    [
+                      "vis",
+                      [
+                        { "t": "{it}died{/it} at the age of 56" },
+                        { "t": "{wi}die{/wi} young" },
+                        { "t": "{it}died{/it} from his injuries" },
+                        { "t": "a {it}dying{/it} tree" }
+                      ]
+                    ]
+                  ]
+                }
+              ]
+            ],
+            [
+              [
+                "sense",
+                {
+                  "sn": "2 a",
+                  "dt": [
+                    ["text", "{bc}to pass out of existence {bc}{sx|cease||} "],
+                    [
+                      "vis",
+                      [{ "t": "their anger {it}died{/it} at these words" }]
+                    ]
+                  ]
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "b",
+                  "dt": [
+                    ["text", "{bc}to disappear or subside gradually "],
+                    [
+                      "uns",
+                      [
+                        [
+                          [
+                            "text",
+                            "often used with {it}away, down{/it}, or {it}out{/it} "
+                          ],
+                          ["vis", [{ "t": "the storm {it}died{/it} down" }]]
+                        ]
+                      ]
+                    ]
+                  ]
+                }
+              ]
+            ],
+            [
+              [
+                "sense",
+                {
+                  "sn": "3 a",
+                  "dt": [
+                    ["text", "{bc}{sx|sink||}, {sx|languish||} "],
+                    ["vis", [{ "t": "{it}dying{/it} from fatigue" }]]
+                  ]
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "b",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}to {d_link|long|long:4} keenly or desperately "
+                    ],
+                    ["vis", [{ "t": "{it}dying{/it} to go" }]]
+                  ]
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "c",
+                  "dt": [
+                    ["text", "{bc}to be overwhelmed by emotion "],
+                    ["vis", [{ "t": "{wi}die{/wi} of embarrassment" }]]
+                  ]
+                }
+              ]
+            ],
+            [
+              [
+                "sense",
+                {
+                  "sn": "4 a",
+                  "dt": [
+                    ["text", "{bc}to cease functioning {bc}{sx|stop||} "],
+                    ["vis", [{ "t": "the motor {it}died{/it}" }]]
+                  ]
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "b",
+                  "dt": [
+                    ["text", "{bc}to end in failure "],
+                    ["vis", [{ "t": "the bill {it}died{/it} in committee" }]]
+                  ]
+                }
+              ]
+            ],
+            [
+              [
+                "sense",
+                {
+                  "sn": "5",
+                  "dt": [
+                    ["text", "{bc}to become indifferent "],
+                    ["vis", [{ "t": "{wi}die{/wi} to worldly things" }]]
+                  ]
+                }
+              ]
+            ]
+          ]
+        }
+      ],
+      "dros": [
+        {
+          "drp": "die hard",
+          "def": [
+            {
+              "sseq": [
                 [
-                  "text",
-                  "{bc}having or marked by great {a_link|volume} or bulk {bc}{sx|large||} "
+                  [
+                    "sense",
+                    {
+                      "sn": "1",
+                      "dt": [
+                        ["text", "{bc}to be long in dying "],
+                        ["vis", [{ "t": "such rumors {it}die hard{/it}" }]]
+                      ]
+                    }
+                  ]
                 ],
                 [
-                  "vis",
                   [
+                    "sense",
                     {
-                      "t": "long {wi}voluminous{/wi} tresses"
+                      "sn": "2",
+                      "dt": [
+                        [
+                          "text",
+                          "{bc}to continue resistance against hopeless odds "
+                        ],
+                        [
+                          "vis",
+                          [
+                            {
+                              "t": "that kind of determination {it}dies hard{/it}"
+                            }
+                          ]
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "drp": "die on the vine",
+          "def": [
+            {
+              "sseq": [
+                [
+                  [
+                    "sense",
+                    {
+                      "dt": [
+                        [
+                          "text",
+                          "{bc}to fail especially at an early stage through lack of support or enthusiasm "
+                        ],
+                        [
+                          "vis",
+                          [{ "t": "let the proposal {it}die on the vine{/it}" }]
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "drp": "to die for",
+          "def": [
+            {
+              "sseq": [
+                [
+                  [
+                    "sense",
+                    {
+                      "dt": [
+                        ["text", "{bc}extremely desirable or appealing "],
+                        [
+                          "vis",
+                          [{ "t": "the dessert was {it}to die for{/it}" }]
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "et": [
+        [
+          "text",
+          "Middle English {it}dien{/it}, from or akin to Old Norse {it}deyja{/it} to die; akin to Old High German {it}touwen{/it} to die"
+        ]
+      ],
+      "date": "12th century{ds||1||}",
+      "shortdef": [
+        "to pass from physical life : expire",
+        "to pass out of existence : cease",
+        "to disappear or subside gradually —often used with away, down, or out"
+      ]
+    },
+    {
+      "meta": {
+        "id": "die:2",
+        "uuid": "cab7c1ea-31c9-46ef-a981-31a461c9ad33",
+        "sort": "041983000",
+        "src": "collegiate",
+        "section": "alpha",
+        "stems": ["dice", "die", "dies"],
+        "offensive": false
+      },
+      "hom": 2,
+      "hwi": {
+        "hw": "die",
+        "prs": [
+          {
+            "mw": "ˈdī",
+            "sound": { "audio": "die00001", "ref": "c", "stat": "1" }
+          }
+        ]
+      },
+      "fl": "noun",
+      "ins": [
+        {
+          "il": "plural",
+          "if": "dice",
+          "prs": [
+            {
+              "mw": "ˈdīs",
+              "sound": { "audio": "die00004", "ref": "c", "stat": "1" }
+            }
+          ]
+        },
+        {
+          "il": "or",
+          "if": "dies",
+          "prs": [
+            {
+              "mw": "ˈdīz",
+              "sound": { "audio": "die00005", "ref": "c", "stat": "1" }
+            }
+          ]
+        }
+      ],
+      "def": [
+        {
+          "sseq": [
+            [
+              [
+                "sense",
+                {
+                  "sn": "1",
+                  "ins": [{ "il": "plural", "if": "dice" }],
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}a small cube marked on each face with from one to six spots and used usually in pairs in various games and in gambling by being shaken and thrown to come to rest at random on a flat surface "
+                    ],
+                    [
+                      "uns",
+                      [
+                        [
+                          [
+                            "text",
+                            "often used figuratively in expressions concerning chance or the irrevocability of a course of action "
+                          ],
+                          ["vis", [{ "t": "the {wi}die{/wi} was cast" }]]
+                        ]
+                      ]
+                    ]
+                  ]
+                }
+              ]
+            ],
+            [
+              [
+                "sense",
+                {
+                  "sn": "2",
+                  "ins": [{ "il": "plural", "if": "dies" }],
+                  "sls": ["architecture"],
+                  "dt": [["text", "{bc}{sx|dado||1a}"]]
+                }
+              ]
+            ],
+            [
+              [
+                "pseq",
+                [
+                  [
+                    "bs",
+                    {
+                      "sense": {
+                        "sn": "3",
+                        "ins": [{ "il": "plural", "if": "dies" }],
+                        "dt": [
+                          [
+                            "text",
+                            "{bc}any of various tools or devices for imparting a desired shape, form, or finish to a material or for impressing an object or material: such as"
+                          ]
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "sense",
+                    {
+                      "sn": "a (1)",
+                      "dt": [
+                        [
+                          "text",
+                          "{bc}the larger of a pair of cutting or shaping tools that when moved toward each other produce a desired form in or impress a desired device on an object by pressure or by a blow"
+                        ]
+                      ]
+                    }
+                  ],
+                  [
+                    "sense",
+                    {
+                      "sn": "(2)",
+                      "dt": [
+                        [
+                          "text",
+                          "{bc}a device composed of a pair of such tools"
+                        ]
+                      ]
                     }
                   ]
                 ]
               ],
-              "sdsense": {
-                "sd": "also",
-                "dt": [
-                  ["text", "{bc}{sx|full||} "],
-                  [
-                    "vis",
+              [
+                "sense",
+                {
+                  "sn": "b",
+                  "dt": [
                     [
-                      {
-                        "t": "a {wi}voluminous{/wi} skirt"
-                      }
+                      "text",
+                      "{bc}a hollow internally threaded screw-cutting tool used for forming screw threads"
                     ]
                   ]
-                ]
-              }
-            }
-          ],
-          [
-            "sense",
-            {
-              "sn": "b",
-              "dt": [
-                ["text", "{bc}{sx|numerous||} "],
-                [
-                  "vis",
-                  [
-                    {
-                      "t": "trying to keep track of {wi}voluminous{/wi} slips of paper"
-                    }
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "c",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}a mold into which molten metal or other material is forced"
+                    ]
                   ]
-                ]
-              ]
-            }
-          ]
-        ],
-        [
-          [
-            "sense",
-            {
-              "sn": "2 a",
-              "dt": [
-                [
-                  "text",
-                  "{bc}filling or capable of filling a large volume or several {a_link|volumes} "
-                ],
-                [
-                  "vis",
-                  [
-                    {
-                      "t": "a {wi}voluminous{/wi} literature on the subject"
-                    }
+                }
+              ],
+              [
+                "sense",
+                {
+                  "sn": "d",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}a perforated block through which metal or plastic is drawn or extruded for shaping"
+                    ]
                   ]
-                ]
+                }
               ]
-            }
-          ],
-          [
-            "sense",
-            {
-              "sn": "b",
-              "dt": [
-                ["text", "{bc}writing or speaking much or at great length "],
-                [
-                  "vis",
-                  [
-                    {
-                      "t": "a {wi}voluminous{/wi} correspondent"
-                    }
-                  ]
-                ]
-              ]
-            }
+            ]
           ]
-        ],
-        [
-          [
-            "sense",
-            {
-              "sn": "3",
-              "dt": [
-                [
-                  "text",
-                  "{bc}consisting of many folds, coils, or convolutions {bc}{sx|winding||}"
-                ]
-              ]
-            }
-          ]
-        ]
+        }
+      ],
+      "et": [
+        ["text", "Middle English {it}dee{/it}, from Anglo-French {it}dé{/it}"]
+      ],
+      "date": "14th century{ds||1||}",
+      "shortdef": [
+        "a small cube marked on each face with from one to six spots and used usually in pairs in various games and in gambling by being shaken and thrown to come to rest at random on a flat surface —often used figuratively in expressions concerning chance or the irrevocability of a course of action",
+        "dado",
+        "any of various tools or devices for imparting a desired shape, form, or finish to a material or for impressing an object or material: such as"
       ]
-    }
-  ],
-  "uros": [
-    {
-      "ure": "vo*lu*mi*nous*ly",
-      "fl": "adverb"
     },
     {
-      "ure": "vo*lu*mi*nous*ness",
-      "fl": "noun"
-    }
-  ],
-  "et": [
-    [
-      "text",
-      "Late Latin {it}voluminosus{/it}, from Latin {it}volumin-, volumen{/it}"
-    ]
-  ],
-  "date": "1611{ds||3||}",
-  "ld_link": {
-    "link_hw": "voluminous",
-    "link_fl": "adjective"
-  },
-  "suppl": {
-    "examples": [
-      {
-        "t": "the building\u0027s high ceilings and {it}voluminous{/it} spaces"
+      "meta": {
+        "id": "die-off",
+        "uuid": "90841a81-f132-4196-be99-471fefe35e83",
+        "sort": "041994000",
+        "src": "collegiate",
+        "section": "alpha",
+        "stems": ["die-off", "die-offs"],
+        "offensive": false
       },
-      {
-        "t": "a writer of {it}voluminous{/it} output"
-      }
-    ],
-    "ldq": {
-      "ldhw": "voluminous",
-      "fl": "adjective",
+      "hwi": {
+        "hw": "die-off",
+        "prs": [
+          {
+            "mw": "ˈdī-ˌȯf",
+            "sound": { "audio": "die_of01", "ref": "c", "stat": "1" }
+          }
+        ]
+      },
+      "fl": "noun",
       "def": [
         {
-          "sls": ["formal"],
           "sseq": [
             [
               [
                 "sense",
                 {
                   "dt": [
-                    ["text", "{bc}very large {bc}containing a lot of space"]
+                    [
+                      "text",
+                      "{bc}a sudden sharp decline of a population of animals or plants that is not caused directly by human activity"
+                    ]
                   ]
-                }
-              ]
-            ],
-            [
-              [
-                "sense",
-                {
-                  "sls": ["of clothing"],
-                  "dt": [
-                    ["text", "{bc}using large amounts of fabric {bc}very full"]
-                  ]
-                }
-              ]
-            ],
-            [
-              [
-                "sense",
-                {
-                  "dt": [["text", "{bc}having very many words or pages"]]
                 }
               ]
             ]
           ]
         }
+      ],
+      "date": "1936",
+      "shortdef": [
+        "a sudden sharp decline of a population of animals or plants that is not caused directly by human activity"
+      ]
+    },
+    {
+      "meta": {
+        "id": "die off",
+        "uuid": "80f9ee09-334a-45ae-85ee-439f4a9bbab0",
+        "sort": "041995000",
+        "src": "collegiate",
+        "section": "alpha",
+        "stems": ["die off", "died off", "dies off", "dying off"],
+        "offensive": false
+      },
+      "hwi": {
+        "hw": "die off",
+        "prs": [
+          {
+            "mw": "ˈdī-ˈȯf",
+            "sound": { "audio": "die_of01", "ref": "c", "stat": "1" }
+          }
+        ]
+      },
+      "fl": "verb",
+      "ins": [
+        { "if": "died off" },
+        { "if": "dy*ing off" },
+        { "if": "dies off" }
+      ],
+      "def": [
+        {
+          "vd": "intransitive verb",
+          "sseq": [
+            [
+              [
+                "sense",
+                {
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}to die sequentially either singly or in numbers so that the total number is greatly diminished"
+                    ]
+                  ]
+                }
+              ]
+            ]
+          ]
+        }
+      ],
+      "date": "1697",
+      "shortdef": [
+        "to die sequentially either singly or in numbers so that the total number is greatly diminished"
       ]
     }
-  },
-  "shortdef": [
-    "having or marked by great volume or bulk : large; also : full",
-    "numerous",
-    "filling or capable of filling a large volume or several volumes"
   ]
 }

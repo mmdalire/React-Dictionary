@@ -1,11 +1,11 @@
 @import url("../styles/App.css");
 
 .Definition {
-  margin: 10px 0;
   padding: 10px;
 }
 
 #label {
+  text-decoration: underline;
   color: var(--class-component-primary);
 }
 
