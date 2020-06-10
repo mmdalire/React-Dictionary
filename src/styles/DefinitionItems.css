@@ -3,4 +3,5 @@
 li {
   color: var(--class-component-primary);
   text-align: justify;
+  list-style-position: inside;
 }

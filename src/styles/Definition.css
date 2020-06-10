@@ -4,9 +4,10 @@
   padding: 10px;
 }
 
-#label {
+.label {
   text-decoration: underline;
   color: var(--class-component-primary);
+  margin: 3px 0;
 }
 
 #highlight {

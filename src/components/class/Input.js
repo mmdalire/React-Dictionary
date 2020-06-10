@@ -9,11 +9,19 @@ class Input extends Component {
     };
 
     this.handleInput = this.handleInput.bind(this);
+    this.searchKeyword = this.searchKeyword.bind(this);
   }
 
   handleInput(e) {
     this.setState({
       word: e.target.value,
+    });
+  }
+
+  searchKeyword() {
+    this.props.searchKeywordHandler(this.state.word);
+    this.setState({
+      word: "",
     });
   }
 
@@ -26,7 +34,12 @@ class Input extends Component {
           placeholder="Search keyword"
           onChange={this.handleInput}
         />
-        <button id="submit">Search</button>
+        <button
+          id="submit"
+          onClick={() => this.props.searchKeywordHandler(this.state.word)}
+        >
+          Search
+        </button>
       </div>
     );
   }

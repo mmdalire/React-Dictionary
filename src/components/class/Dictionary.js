@@ -9,8 +9,29 @@ class Dictionary extends Component {
   constructor() {
     super();
     this.state = {
-      dictionary: Default.info,
+      dictionary: Default,
     };
+    this.searchKeywordHandler = this.searchKeywordHandler.bind(this);
+  }
+
+  searchKeywordHandler(word) {
+    this.searchKeywordApi(word);
+  }
+
+  searchKeywordApi(word) {
+    const BASE_URL =
+      "https://dictionaryapi.com/api/v3/references/collegiate/json/";
+    const API_KEY = `key=${process.env.REACT_APP_DICTIONARY_KEY}`;
+    const URL = `${BASE_URL}${word}?${API_KEY}`;
+
+    fetch(URL)
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          dictionary: data,
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
@@ -19,7 +40,7 @@ class Dictionary extends Component {
     return (
       <div className="Dictionary">
         <Header />
-        <Input />
+        <Input searchKeywordHandler={this.searchKeywordHandler} />
         <Output dictionary={dictionary} />
       </div>
     );

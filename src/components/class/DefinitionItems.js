@@ -2,13 +2,21 @@ import React, { Component } from "react";
 import "../../styles/DefinitionItems.css";
 
 class DefinitionItems extends Component {
+  //Getting the exact data inside super nested objects and arrays
   cleanDefinitions(wordObject) {
-    //Getting the exact data inside super nested objects and arrays
+    //If the object inside is inside an array, retrive the specific definition
     if (wordObject.length !== undefined) {
       if (wordObject.length >= 2) {
         return wordObject[1][1].dt[0][1];
       }
-      return wordObject;
+    }
+    //If no definition exists for that word, return the label
+    if ("lbs" in wordObject) {
+      return wordObject.lbs[0];
+    }
+    //Retrieve definition with the keyword 'text' in the array
+    if (wordObject.dt[0][0] !== "text") {
+      return wordObject.dt[0][1][0][0][1];
     }
     return wordObject.dt[0][1];
   }
@@ -66,29 +74,22 @@ class DefinitionItems extends Component {
 
     //Return filtered strings
     //When no string is left due to filtering, place the words inside the special tokens
-    return original.length <= 1
-      ? [wordsTokenList.join(", "), true]
-      : original.toString();
-  }
-
-  toggleSpecialFormat(results) {
-    if (results[1] === true) {
-      return {
-        backgroundColor: "var(--class-component-primary)",
-        color: "var(--class-component-secondary)",
-        padding: "2px",
-      };
-    }
-    return null;
+    return original.length <= 1 ? (
+      <>
+        <b>Search for: </b>
+        <i>{wordsTokenList.join(", ")}</i>
+      </>
+    ) : (
+      original.slice(0, 1).toUpperCase() + original.slice(1)
+    );
   }
 
   render() {
     const { definition } = this.props;
     const shortenedDefinition = this.cleanDefinitions(definition[0][1]);
     const getText = this.getText(shortenedDefinition);
-    const doToggleSpecialFormat = this.toggleSpecialFormat(getText);
 
-    return <li style={doToggleSpecialFormat}>{getText}</li>;
+    return <li>{getText}</li>;
   }
 }
 

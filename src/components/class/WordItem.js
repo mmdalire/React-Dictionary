@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MainWord from "./MainWord";
 import Detailed from "./Detailed";
 import Definition from "./Definition";
+import OtherUsage from "./OtherUsage";
 import "../../styles/WordItem.css";
 
 class WordItem extends Component {
@@ -11,6 +12,25 @@ class WordItem extends Component {
 
   changeSyllableStyle(syllable) {
     return syllable.split("*").join("•");
+  }
+
+  //If there are no pronounciations listed, return nothing
+  checkPronounciation(object) {
+    if (!("prs" in object)) {
+      return {
+        ...object,
+        prs: [{ mw: "--" }],
+      }.prs[0].mw;
+    }
+    return object.prs[0].mw;
+  }
+
+  //Extract the sound files
+  checkSound(object) {
+    if (!("prs" in object)) {
+      return null;
+    }
+    return object.prs[0].sound.audio;
   }
 
   render() {
@@ -23,11 +43,16 @@ class WordItem extends Component {
         />
         <Detailed
           syllable={this.changeSyllableStyle(dictionary.hwi.hw)}
-          pronounciation={dictionary.hwi.prs[0].mw}
+          pronounciation={this.checkPronounciation(dictionary.hwi)}
+          sound={this.checkSound(dictionary.hwi)}
         />
         <Definition
           word={this.removeDuplicates(dictionary.meta.id)}
-          definition={dictionary.def[0]}
+          definition={dictionary.def[0].sseq}
+        />
+        <OtherUsage
+          word={this.removeDuplicates(dictionary.meta.id)}
+          stem={dictionary.meta.stems}
         />
       </div>
     );
