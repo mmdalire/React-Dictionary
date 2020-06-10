@@ -27,6 +27,11 @@
   padding: 0 10px;
 }
 
+#pronounciation-sound:disabled #speaker {
+  color: gray;
+  cursor: initial;
+}
+
 #speaker {
   color: var(--class-component-primary);
   font-size: 20px;

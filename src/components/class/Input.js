@@ -34,10 +34,7 @@ class Input extends Component {
           placeholder="Search keyword"
           onChange={this.handleInput}
         />
-        <button
-          id="submit"
-          onClick={() => this.props.searchKeywordHandler(this.state.word)}
-        >
+        <button id="submit" onClick={this.searchKeyword}>
           Search
         </button>
       </div>
