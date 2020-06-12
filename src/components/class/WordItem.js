@@ -30,6 +30,9 @@ class WordItem extends Component {
     if (!("prs" in object)) {
       return null;
     }
+    if (!("sound" in object.prs[0])) {
+      return null;
+    }
     return object.prs[0].sound.audio;
   }
 

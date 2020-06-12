@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import WordItem from "./WordItem";
 import NoResultsFound from "./NoResultsFound";
+import RandomWord from "./RandomWord";
 import "../../styles/Output.css";
 
 class Output extends Component {
@@ -12,16 +13,22 @@ class Output extends Component {
   }
 
   render() {
-    const { dictionary } = this.props;
+    const { dictionary, randomWords, showRandomWords } = this.props;
     const output = this.doOutputResults(dictionary);
     return (
       <div className="Output">
-        {output ? (
-          dictionary.map((word) => (
-            <WordItem key={word.meta.id} dictionary={word} />
-          ))
+        {showRandomWords ? (
+          <RandomWord randomWords={randomWords} />
         ) : (
-          <NoResultsFound relatedWord={dictionary} />
+          <>
+            {output ? (
+              dictionary.map((word) => (
+                <WordItem key={word.meta.id} dictionary={word} />
+              ))
+            ) : (
+              <NoResultsFound relatedWord={dictionary} />
+            )}
+          </>
         )}
       </div>
     );

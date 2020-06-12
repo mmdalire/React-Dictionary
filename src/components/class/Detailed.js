@@ -23,8 +23,10 @@ class Detailed extends Component {
   }
 
   //Play audio when button is clicked
+  //----------NEEDS TO BE FIXED----------------//
   playAudio() {
-    document.querySelector("#play").play();
+    const play = document.querySelector("#play");
+    play.play();
   }
 
   render() {
