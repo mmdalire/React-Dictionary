@@ -28,7 +28,7 @@ class Detailed extends Component {
   }
 
   render() {
-    const { syllable, pronounciation, sound } = this.props;
+    const { syllable, pronounciation, sound, offensive } = this.props;
     const soundUrl = this.getSoundUrl(sound);
     return (
       <div className="Detailed">
@@ -42,6 +42,7 @@ class Detailed extends Component {
         >
           <i className="fas fa-volume-up" id="speaker"></i>
         </button>
+        {offensive ? <small id="offensive">Offensive</small> : ""}
       </div>
     );
   }

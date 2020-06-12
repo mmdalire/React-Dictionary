@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.Detailed:not(:last-child) {
+  display: block;
+}
+
 .Detailed small {
   font-size: 18px;
 }
@@ -41,4 +45,12 @@
 
 #speaker:hover {
   color: white;
+}
+
+#offensive {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: maroon;
 }

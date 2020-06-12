@@ -33,6 +33,18 @@ class WordItem extends Component {
     return object.prs[0].sound.audio;
   }
 
+  //Check if definition exists
+  checkDefinition(object) {
+    if (!("def" in object)) {
+      return [
+        {
+          sseq: [[["sense", { dt: [["text", "No definition assigned"]] }]]],
+        },
+      ][0].sseq;
+    }
+    return object.def[0].sseq;
+  }
+
   render() {
     const { dictionary } = this.props;
     return (
@@ -45,10 +57,11 @@ class WordItem extends Component {
           syllable={this.changeSyllableStyle(dictionary.hwi.hw)}
           pronounciation={this.checkPronounciation(dictionary.hwi)}
           sound={this.checkSound(dictionary.hwi)}
+          offensive={dictionary.meta.offensive}
         />
         <Definition
           word={this.removeDuplicates(dictionary.meta.id)}
-          definition={dictionary.def[0].sseq}
+          definition={this.checkDefinition(dictionary)}
         />
         <OtherUsage
           word={this.removeDuplicates(dictionary.meta.id)}

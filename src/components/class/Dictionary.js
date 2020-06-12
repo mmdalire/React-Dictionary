@@ -3,13 +3,12 @@ import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
 import "../../styles/Dictionary.css";
-import Default from "../../default.json";
 
 class Dictionary extends Component {
   constructor() {
     super();
     this.state = {
-      dictionary: Default,
+      dictionary: [],
     };
     this.searchKeywordHandler = this.searchKeywordHandler.bind(this);
   }

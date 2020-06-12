@@ -1,0 +1,17 @@
+@import url("../styles/App.css");
+
+.error-header {
+  font-weight: bold;
+  color: var(--class-component-primary);
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 3px solid var(--class-component-primary);
+}
+
+.related-words {
+  color: var(--class-component-primary);
+  font-size: 20px;
+  text-align: center;
+}

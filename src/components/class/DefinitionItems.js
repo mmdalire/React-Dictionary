@@ -14,6 +14,17 @@ class DefinitionItems extends Component {
     if ("lbs" in wordObject) {
       return wordObject.lbs[0];
     }
+
+    //If no dt exists
+    if (!("dt" in wordObject)) {
+      //If it has an alternate definition
+      if ("sense" in wordObject) {
+        return wordObject.sense.dt[0][1];
+      }
+      //If it is a slang term
+      return `{[${wordObject.sls}]}`;
+    }
+
     //Retrieve definition with the keyword 'text' in the array
     if (wordObject.dt[0][0] !== "text") {
       return wordObject.dt[0][1][0][0][1];
@@ -22,7 +33,7 @@ class DefinitionItems extends Component {
   }
 
   getTokensInString(word) {
-    const tokenList = [];
+    const dictionaryTokenList = [];
     let token = "";
     let braces = false;
 
@@ -37,7 +48,7 @@ class DefinitionItems extends Component {
         if (word[i] === "}") {
           token += word[i];
           braces = false;
-          tokenList.push(token);
+          dictionaryTokenList.push(token);
           token = "";
           continue;
         }
@@ -47,37 +58,59 @@ class DefinitionItems extends Component {
     }
 
     //Return array without any duplicate tokens
-    return tokenList.filter(
-      (token, index) => tokenList.indexOf(token) === index
+    return dictionaryTokenList.filter(
+      (token, index) => dictionaryTokenList.indexOf(token) === index
     );
   }
 
   getStringsInTokenList(tokens) {
     //In special tokens, retrieve meaningful words inside them
     const wordsFound = [];
+    const slangFound = [];
     tokens.forEach((token) => {
       if (token.includes("|")) {
         wordsFound.push(token.split("|")[1]);
       }
+      if (token.includes("[")) {
+        slangFound.push(token.split("[")[1].split("]")[0]);
+      }
     });
-    return wordsFound;
+    return [wordsFound, slangFound];
   }
 
   getText(original) {
-    const tokenList = this.getTokensInString(original);
-    const wordsTokenList = this.getStringsInTokenList(tokenList);
+    //When no definition exists
+    if (original === "No definition assigned") {
+      return (
+        <b>
+          <i>{original}</i>
+        </b>
+      );
+    }
+
+    const dictionaryTokenList = this.getTokensInString(original);
+    const wordsTokenList = this.getStringsInTokenList(dictionaryTokenList);
 
     //Remove all tokens in the data
-    tokenList.forEach(
+    dictionaryTokenList.forEach(
       (token) => (original = original.split(token).join("").trim())
     );
 
     //Return filtered strings
+    //If slang is the only thing returned
+    if (wordsTokenList[1].length !== 0) {
+      return (
+        <>
+          <b>Slang used in / for: </b>
+          <i>{wordsTokenList[1].join(", ")}</i>
+        </>
+      );
+    }
     //When no string is left due to filtering, place the words inside the special tokens
     return original.length <= 1 ? (
       <>
         <b>Search for: </b>
-        <i>{wordsTokenList.join(", ")}</i>
+        <i>{wordsTokenList[0].join(", ")}</i>
       </>
     ) : (
       original.slice(0, 1).toUpperCase() + original.slice(1)
