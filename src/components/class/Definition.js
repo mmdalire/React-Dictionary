@@ -4,14 +4,18 @@ import "../../styles/Definition.css";
 
 class Definition extends Component {
   render() {
-    const { word, definition } = this.props;
+    const { word, definition, styles } = this.props;
     return (
       <div className="Definition">
-        <h2 className="label">
+        <h2 style={{ color: styles.color }} className="label">
           Definition of <span id="highlight">{word}</span>
         </h2>
         {definition.map((definition, index) => (
-          <DefinitionItems key={index} definition={definition} />
+          <DefinitionItems
+            key={index}
+            styles={styles}
+            definition={definition}
+          />
         ))}
       </div>
     );

@@ -1,8 +1,6 @@
 @import url("./App.css");
 
 .Header {
-  background-color: var(--class-component-secondary);
-  color: var(--class-component-primary);
   margin: -10px;
   padding: 10px;
   text-align: center;

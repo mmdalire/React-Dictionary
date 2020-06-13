@@ -32,16 +32,23 @@ class Input extends Component {
   }
 
   render() {
+    const { styles } = this.props;
     return (
       <div className="Input">
-        <i className="fas fa-search" id="search-logo"></i>
+        <i
+          className="fas fa-search"
+          style={{ color: styles.color }}
+          id="search-logo"
+        ></i>
         <input
           type="text"
+          style={{ borderBottomColor: styles.color }}
           placeholder="Search keyword"
           onChange={this.handleInput}
         />
         <button
           id="submit"
+          style={{ borderColor: styles.color }}
           onClick={() =>
             this.searchKeyword(this.state.word, this.isInputEmpty(), false)
           }

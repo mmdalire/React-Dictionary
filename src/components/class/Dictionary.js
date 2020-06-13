@@ -14,6 +14,10 @@ class Dictionary extends Component {
       randomWords: RandomWords,
       showRandomWords: true,
       doneSearching: false,
+      styles: {
+        backgroundColor: "var(--class-component-secondary)",
+        color: "var(--class-component-primary)",
+      },
     };
 
     this.searchKeywordHandler = this.searchKeywordHandler.bind(this);
@@ -61,23 +65,26 @@ class Dictionary extends Component {
       randomWords,
       showRandomWords,
       doneSearching,
+      styles,
     } = this.state;
 
     return (
       <div className="Dictionary">
-        <Header />
+        <Header styles={styles} />
         <Input
+          styles={styles}
           searchKeywordHandler={this.searchKeywordHandler}
           toggleRandomHandler={this.toggleRandomHandler}
           doneSearchingHandler={this.doneSearchingHandler}
         />
         <Output
+          styles={styles}
           dictionary={dictionary}
           randomWords={randomWords}
           showRandomWords={showRandomWords}
           doneSearching={doneSearching}
         />
-        <PoweredBy />
+        <PoweredBy styles={styles} />
       </div>
     );
   }

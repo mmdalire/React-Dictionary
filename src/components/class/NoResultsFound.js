@@ -12,14 +12,17 @@ class NoResultsFound extends Component {
   }
 
   render() {
-    const { relatedWord } = this.props;
+    const { relatedWord, styles } = this.props;
     return (
-      <div className="NoResultsFound">
-        <div className="error-header">
+      <div>
+        <div
+          style={{ color: styles.color, borderBottomColor: styles.color }}
+          className="error-header"
+        >
           Sorry, we couldn't find any definition for the word you're looking
           for.
         </div>
-        <div className="related-words">
+        <div style={{ color: styles.color }} className="related-words">
           {this.listRelatedWords(relatedWord)}
         </div>
       </div>

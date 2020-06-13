@@ -2,7 +2,7 @@
 
 .WordItem {
   padding: 10px 0;
-  border-bottom: 2px solid var(--class-component-primary);
+  border-bottom: 2px solid;
 }
 
 .WordItem:last-child {

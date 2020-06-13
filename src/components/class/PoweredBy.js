@@ -3,11 +3,13 @@ import "../../styles/PoweredBy.css";
 
 class PoweredBy extends Component {
   render() {
+    const { styles } = this.props;
     return (
-      <div className="PoweredBy">
+      <div style={{ color: styles.color }} className="PoweredBy">
         <h3>
           Powered by:{" "}
           <a
+            style={{ color: styles.color }}
             href="https://dictionaryapi.com/"
             target="_blank"
             rel="noopener norefferer"

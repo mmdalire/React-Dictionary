@@ -49,26 +49,30 @@ class WordItem extends Component {
   }
 
   render() {
-    const { dictionary } = this.props;
+    const { dictionary, styles } = this.props;
     return (
-      <div className="WordItem">
+      <div style={{ borderBottomColor: styles.color }} className="WordItem">
         <MainWord
           word={this.removeDuplicates(dictionary.meta.id)}
           figureOfSpeech={dictionary.fl}
+          styles={styles}
         />
         <Detailed
           syllable={this.changeSyllableStyle(dictionary.hwi.hw)}
           pronounciation={this.checkPronounciation(dictionary.hwi)}
           sound={this.checkSound(dictionary.hwi)}
           offensive={dictionary.meta.offensive}
+          styles={styles}
         />
         <Definition
           word={this.removeDuplicates(dictionary.meta.id)}
           definition={this.checkDefinition(dictionary)}
+          styles={styles}
         />
         <OtherUsage
           word={this.removeDuplicates(dictionary.meta.id)}
           stem={dictionary.meta.stems}
+          styles={styles}
         />
       </div>
     );

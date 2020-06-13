@@ -1,14 +1,11 @@
 @import url("../styles/App.css");
 
 .RandomWord {
-  color: var(--class-component-primary);
   padding: 10px;
   text-align: center;
 }
 
 #title {
-  background-color: var(--class-component-primary);
-  color: var(--class-component-secondary);
   text-transform: uppercase;
   letter-spacing: 10px;
   padding: 10px;
@@ -17,7 +14,7 @@
 #leading-word {
   font-size: 30px;
   padding-top: 20px;
-  border-bottom: 3px solid var(--class-component-primary);
+  border-bottom: 3px solid;
 }
 
 #description {

@@ -1,7 +1,6 @@
 @import url("../styles/App.css");
 
 .Output {
-  background-color: var(--class-component-secondary);
   padding: 10px;
   height: 370px;
   overflow-y: auto;

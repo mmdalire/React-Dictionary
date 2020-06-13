@@ -118,11 +118,11 @@ class DefinitionItems extends Component {
   }
 
   render() {
-    const { definition } = this.props;
+    const { definition, styles } = this.props;
     const shortenedDefinition = this.cleanDefinitions(definition[0][1]);
     const getText = this.getText(shortenedDefinition);
 
-    return <li>{getText}</li>;
+    return <li style={{ color: styles.color }}>{getText}</li>;
   }
 }
 

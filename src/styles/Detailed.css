@@ -1,7 +1,6 @@
 @import url("../styles/App.css");
 
 .Detailed {
-  color: var(--class-component-primary);
   padding: 0 10px;
   margin-top: -10px;
   display: flex;
@@ -17,7 +16,7 @@
 
 #syllable {
   padding-right: 10px;
-  border-right: 2px solid var(--class-component-primary);
+  border-right: 2px solid;
 }
 
 #pronounciation {
@@ -32,19 +31,14 @@
 }
 
 #pronounciation-sound:disabled #speaker {
-  color: gray;
+  display: none;
   cursor: initial;
 }
 
 #speaker {
-  color: var(--class-component-primary);
   font-size: 20px;
   cursor: pointer;
-  transition: 0.5s color;
-}
-
-#speaker:hover {
-  color: white;
+  transition: 0.5s all;
 }
 
 #offensive {

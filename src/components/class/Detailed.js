@@ -30,18 +30,24 @@ class Detailed extends Component {
   }
 
   render() {
-    const { syllable, pronounciation, sound, offensive } = this.props;
+    const { syllable, pronounciation, sound, offensive, styles } = this.props;
     const soundUrl = this.getSoundUrl(sound);
     return (
-      <div className="Detailed">
-        <small id="syllable">{syllable}</small>
+      <div style={{ color: styles.color }} className="Detailed">
+        <small style={{ borderRightColor: styles.color }} id="syllable">
+          {syllable}
+        </small>
         <small id="pronounciation">{pronounciation}</small>
         <button
           id="pronounciation-sound"
           disabled={soundUrl[1]}
           onClick={() => this.playAudio(soundUrl[0])}
         >
-          <i className="fas fa-volume-up" id="speaker"></i>
+          <i
+            style={{ color: styles.color }}
+            className="fas fa-volume-up"
+            id="speaker"
+          ></i>
         </button>
         {offensive ? <small id="offensive">Offensive</small> : ""}
       </div>

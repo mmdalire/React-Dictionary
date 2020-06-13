@@ -19,22 +19,31 @@ class Output extends Component {
       randomWords,
       showRandomWords,
       doneSearching,
+      styles,
     } = this.props;
     const output = this.doOutputResults(dictionary);
+
     return (
-      <div className="Output">
+      <div
+        style={{ backgroundColor: styles.backgroundColor }}
+        className="Output"
+      >
         {showRandomWords ? (
-          <RandomWord randomWords={randomWords} />
+          <RandomWord styles={styles} randomWords={randomWords} />
         ) : (
           <>
             {output ? (
               dictionary.map((word) => (
-                <WordItem key={word.meta.id} dictionary={word} />
+                <WordItem
+                  styles={styles}
+                  key={word.meta.id}
+                  dictionary={word}
+                />
               ))
             ) : doneSearching ? (
-              <NoResultsFound relatedWord={dictionary} />
+              <NoResultsFound styles={styles} relatedWord={dictionary} />
             ) : (
-              <Loading />
+              <Loading styles={styles} />
             )}
           </>
         )}

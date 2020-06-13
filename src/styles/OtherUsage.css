@@ -2,10 +2,4 @@
 
 .OtherUsage {
   padding: 10px;
-  background-color: var(--class-component-primary);
-  color: var(--class-component-secondary);
-}
-
-.OtherUsage .label {
-  color: var(--class-component-secondary);
 }

@@ -8,7 +8,6 @@
 
 #search-logo {
   margin-top: 5px;
-  color: var(--class-component-primary);
   padding-top: 3px;
 }
 
@@ -16,28 +15,17 @@ input {
   padding: 5px;
   margin: 0 10px;
   border: none;
-  border-bottom: 2px solid var(--class-component-primary);
+  border-bottom: 2px solid;
   background-color: transparent;
   outline: none;
 }
 
-::placeholder {
-  color: var(--class-component-primary);
-}
-
 #submit {
   background-color: transparent;
-  color: var(--class-component-primary);
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 0;
-  border: 2px solid var(--class-component-primary);
+  border: 2px solid;
   padding: 5px 10px;
   cursor: pointer;
-  transition: 0.5s background-color;
-}
-
-#submit:hover {
-  background-color: var(--class-component-primary);
-  color: white;
 }
