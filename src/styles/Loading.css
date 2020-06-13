@@ -1,0 +1,14 @@
+@import url("../styles/App.css");
+
+.Loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#loading-message {
+  font-size: 50px;
+  color: var(--class-component-primary);
+}

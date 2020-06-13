@@ -24,8 +24,8 @@ class Detailed extends Component {
 
   //Play audio when button is clicked
   //----------NEEDS TO BE FIXED----------------//
-  playAudio() {
-    const play = document.querySelector("#play");
+  playAudio(audio) {
+    const play = new Audio(audio);
     play.play();
   }
 
@@ -36,11 +36,10 @@ class Detailed extends Component {
       <div className="Detailed">
         <small id="syllable">{syllable}</small>
         <small id="pronounciation">{pronounciation}</small>
-        <audio id="play" src={soundUrl[0]} />
         <button
           id="pronounciation-sound"
           disabled={soundUrl[1]}
-          onClick={this.playAudio}
+          onClick={() => this.playAudio(soundUrl[0])}
         >
           <i className="fas fa-volume-up" id="speaker"></i>
         </button>

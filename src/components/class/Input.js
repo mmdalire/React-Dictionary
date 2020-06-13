@@ -22,9 +22,10 @@ class Input extends Component {
     return this.state.word ? false : true;
   }
 
-  searchKeyword(word, showRandomWords) {
+  searchKeyword(word, showRandomWords, doneSearching) {
     this.props.searchKeywordHandler(word);
     this.props.toggleRandomHandler(showRandomWords);
+    this.props.doneSearchingHandler(doneSearching);
     this.setState({
       word: "",
     });
@@ -42,7 +43,7 @@ class Input extends Component {
         <button
           id="submit"
           onClick={() =>
-            this.searchKeyword(this.state.word, this.isInputEmpty())
+            this.searchKeyword(this.state.word, this.isInputEmpty(), false)
           }
         >
           Search

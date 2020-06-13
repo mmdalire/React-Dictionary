@@ -1,0 +1,12 @@
+@import url("../styles/App.css");
+
+.PoweredBy {
+  padding: 10px;
+  color: var(--class-component-primary);
+  text-align: center;
+}
+
+.PoweredBy a {
+  color: var(--class-component-primary);
+  text-decoration: none;
+}

@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Input from "./Input";
 import Output from "./Output";
+import PoweredBy from "./PoweredBy";
 import "../../styles/Dictionary.css";
 import RandomWords from "../../randomWords.json";
-import Default from "../../default.json"; //To be removed when loading feature is fixed
 
 class Dictionary extends Component {
   constructor() {
     super();
     this.state = {
       dictionary: [],
-      //dictionary: Default, //To be removed when loading feature is fixed
       randomWords: RandomWords,
       showRandomWords: true,
+      doneSearching: false,
     };
 
     this.searchKeywordHandler = this.searchKeywordHandler.bind(this);
     this.toggleRandomHandler = this.toggleRandomHandler.bind(this);
+    this.doneSearchingHandler = this.doneSearchingHandler.bind(this);
   }
 
   searchKeywordHandler(word) {
@@ -28,6 +29,12 @@ class Dictionary extends Component {
     this.setState({
       dictionary: [],
       showRandomWords: status,
+    });
+  }
+
+  doneSearchingHandler(reset) {
+    this.setState({
+      doneSearching: false,
     });
   }
 
@@ -42,13 +49,19 @@ class Dictionary extends Component {
       .then((data) => {
         this.setState({
           dictionary: data,
+          doneSearching: true,
         });
       })
       .catch((error) => console.log(error));
   }
 
   render() {
-    const { dictionary, randomWords, showRandomWords } = this.state;
+    const {
+      dictionary,
+      randomWords,
+      showRandomWords,
+      doneSearching,
+    } = this.state;
 
     return (
       <div className="Dictionary">
@@ -56,12 +69,15 @@ class Dictionary extends Component {
         <Input
           searchKeywordHandler={this.searchKeywordHandler}
           toggleRandomHandler={this.toggleRandomHandler}
+          doneSearchingHandler={this.doneSearchingHandler}
         />
         <Output
           dictionary={dictionary}
           randomWords={randomWords}
           showRandomWords={showRandomWords}
+          doneSearching={doneSearching}
         />
+        <PoweredBy />
       </div>
     );
   }
