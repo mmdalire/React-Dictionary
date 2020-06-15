@@ -23,7 +23,6 @@ class Detailed extends Component {
   }
 
   //Play audio when button is clicked
-  //----------NEEDS TO BE FIXED----------------//
   playAudio(audio) {
     const play = new Audio(audio);
     play.play();

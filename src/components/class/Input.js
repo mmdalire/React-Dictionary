@@ -48,7 +48,7 @@ class Input extends Component {
         />
         <button
           id="submit"
-          style={{ borderColor: styles.color }}
+          style={{ borderColor: styles.color, color: styles.color }}
           onClick={() =>
             this.searchKeyword(this.state.word, this.isInputEmpty(), false)
           }

@@ -19,7 +19,7 @@ class Footer extends Component {
             <FooterDetailed
               type="Function component"
               dateFrom="June 14, 2020"
-              dateTo="-"
+              dateTo="June 15, 2020"
             />
           </div>
         </div>

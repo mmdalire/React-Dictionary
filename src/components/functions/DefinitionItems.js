@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/DefinitionItems.css";
 
-class DefinitionItems extends Component {
+const DefinitionItems = (props) => {
   //Getting the exact data inside super nested objects and arrays
-  cleanDefinitions(wordObject) {
+  const cleanDefinitions = (wordObject) => {
     //If the object inside is inside an array, retrive the specific definition
     if (wordObject.length !== undefined) {
       if (wordObject.length >= 2) {
@@ -30,9 +30,9 @@ class DefinitionItems extends Component {
       return wordObject.dt[0][1][0][0][1];
     }
     return wordObject.dt[0][1];
-  }
+  };
 
-  getTokensInString(word) {
+  const getTokensInString = (word) => {
     const dictionaryTokenList = [];
     let token = "";
     let braces = false;
@@ -61,9 +61,9 @@ class DefinitionItems extends Component {
     return dictionaryTokenList.filter(
       (token, index) => dictionaryTokenList.indexOf(token) === index
     );
-  }
+  };
 
-  getStringsInTokenList(tokens) {
+  const getStringsInTokenList = (tokens) => {
     //In special tokens, retrieve meaningful words inside them
     const wordsFound = [];
     const slangFound = [];
@@ -76,9 +76,9 @@ class DefinitionItems extends Component {
       }
     });
     return [wordsFound, slangFound];
-  }
+  };
 
-  getDefinitionText(original) {
+  const getDefinitionText = (original) => {
     //When no definition exists
     if (original === "No definition assigned") {
       return (
@@ -88,8 +88,8 @@ class DefinitionItems extends Component {
       );
     }
 
-    const dictionaryTokenList = this.getTokensInString(original);
-    const wordsTokenList = this.getStringsInTokenList(dictionaryTokenList);
+    const dictionaryTokenList = getTokensInString(original);
+    const wordsTokenList = getStringsInTokenList(dictionaryTokenList);
 
     //Remove all tokens in the data
     dictionaryTokenList.forEach(
@@ -115,15 +115,13 @@ class DefinitionItems extends Component {
     ) : (
       original.slice(0, 1).toUpperCase() + original.slice(1)
     );
-  }
+  };
 
-  render() {
-    const { definition, styles } = this.props;
-    const shortenedDefinition = this.cleanDefinitions(definition[0][1]);
-    const getText = this.getDefinitionText(shortenedDefinition);
+  const { definition, styles } = props;
+  const shortenedDefinition = cleanDefinitions(definition[0][1]);
+  const getText = getDefinitionText(shortenedDefinition);
 
-    return <li style={{ color: styles.color }}>{getText}</li>;
-  }
-}
+  return <li style={{ color: styles.color }}>{getText}</li>;
+};
 
 export default DefinitionItems;
