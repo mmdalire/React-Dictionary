@@ -11,7 +11,7 @@ const PoweredBy = (props) => {
           style={{ color: styles.color }}
           href="https://dictionaryapi.com/"
           target="_blank"
-          rel="noopener norefferer"
+          rel="noopener noreferrer"
         >
           Merriam-Webster Dictionary API
         </a>

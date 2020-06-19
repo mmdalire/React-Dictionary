@@ -22,17 +22,19 @@ const Input = (props) => {
 
   return (
     <div className="Input">
-      <i
-        className="fas fa-search"
-        style={{ color: styles.color }}
-        id="search-logo"
-      ></i>
-      <input
-        type="text"
-        style={{ borderBottomColor: styles.color }}
-        placeholder="Search keyword"
-        onChange={(e) => handleInput(e)}
-      />
+      <div>
+        <i
+          className="fas fa-search"
+          style={{ color: styles.color }}
+          id="search-logo"
+        ></i>
+        <input
+          type="text"
+          style={{ borderBottomColor: styles.color }}
+          placeholder="Search keyword"
+          onChange={(e) => handleInput(e)}
+        />
+      </div>
       <button
         id="submit"
         style={{ borderColor: styles.color, color: styles.color }}

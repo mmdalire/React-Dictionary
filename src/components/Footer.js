@@ -8,9 +8,11 @@ class Footer extends Component {
     return (
       <footer>
         <img src={reactLogo} id="logo" alt="React logo" />
-        <div className="footer-content">
-          <h1>React Dictionary</h1>
-          <div className="footer-detailed-container">
+        <div>
+          <div className="footer-header">
+            <h1>React Dictionary</h1>
+          </div>
+          <div className="footer-content">
             <FooterDetailed
               type="Class component"
               dateFrom="June 5, 2020"

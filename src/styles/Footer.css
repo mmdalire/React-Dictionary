@@ -3,16 +3,18 @@
 footer {
   height: 10%;
   background-color: var(--class-component-primary);
-  padding: 0 10px;
+  padding: 10px;
   color: white;
   display: flex;
 }
 
 .footer-content {
-  padding: 15px 0;
+  display: flex;
+  width: 470px;
+  justify-content: space-between;
 }
 
-.footer-detailed-container {
+.footer-header {
   display: flex;
 }
 
@@ -20,4 +22,33 @@ footer {
   width: 100px;
   height: 100px;
   margin: 10px;
+}
+
+@media (max-width: 650px) {
+  footer {
+    flex-direction: column;
+  }
+
+  #logo {
+    margin: auto;
+  }
+
+  .footer-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .footer-content {
+    display: flex;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }

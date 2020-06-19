@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../functions/Header";
 import Input from "../functions/Input";
 import Output from "../functions/Output";
@@ -8,13 +8,12 @@ import RandomWords from "../../randomWords.json";
 
 const Dictionary = () => {
   const [dictionary, setDictionary] = useState([]);
-  const [randomWords, setRandomWords] = useState(RandomWords);
   const [showRandomWords, setShowRandomWords] = useState(true);
   const [doneSearching, setDoneSearching] = useState(false);
-  const [styles, setStyles] = useState({
+  const styles = {
     backgroundColor: "var(--function-component-secondary)",
     color: "var(--function-component-primary)",
-  });
+  };
 
   const searchKeywordHandler = (word) => {
     const BASE_URL =
@@ -52,7 +51,7 @@ const Dictionary = () => {
       <Output
         styles={styles}
         dictionary={dictionary}
-        randomWords={randomWords}
+        randomWords={RandomWords}
         showRandomWords={showRandomWords}
         doneSearching={doneSearching}
       />

@@ -29,3 +29,22 @@ input {
   padding: 5px 10px;
   cursor: pointer;
 }
+
+@media (max-width: 414px) {
+  .Input {
+    flex-direction: column;
+  }
+
+  .Input div {
+    text-align: center;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  #submit {
+    margin: 10px auto 0 auto;
+    width: 90%;
+  }
+}

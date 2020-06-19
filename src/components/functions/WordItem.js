@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import MainWord from "./MainWord";
 import Detailed from "./Detailed";
 import Definition from "./Definition";

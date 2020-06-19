@@ -13,3 +13,9 @@
   font-size: 20px;
   text-align: center;
 }
+
+@media (max-width: 414px) {
+  .error-header {
+    font-size: 25px;
+  }
+}

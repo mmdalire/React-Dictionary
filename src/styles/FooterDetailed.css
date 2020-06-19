@@ -1,5 +1,10 @@
 .FooterDetailed {
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
+}
+
+@media (max-width: 500px) {
+  .FooterDetailed {
+    margin: 10px auto;
+  }
 }
