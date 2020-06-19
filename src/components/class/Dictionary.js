@@ -43,7 +43,7 @@ class Dictionary extends Component {
   }
 
   searchKeywordApi(word) {
-    const baseUrl = ".netlify/functions/get_words?";
+    const baseUrl = "/.netlify/functions/get_words?";
     const searchWord = `word=${word}`;
     const URL = `${baseUrl}${searchWord}`;
 
