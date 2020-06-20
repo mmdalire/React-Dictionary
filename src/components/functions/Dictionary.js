@@ -16,10 +16,9 @@ const Dictionary = () => {
   };
 
   const searchKeywordHandler = (word) => {
-    const BASE_URL =
-      "https://dictionaryapi.com/api/v3/references/collegiate/json/";
-    const API_KEY = `key=${process.env.REACT_APP_DICTIONARY_KEY}`;
-    const URL = `${BASE_URL}${word}?${API_KEY}`;
+    const baseUrl = "/.netlify/functions/get_words?";
+    const searchWord = `word=${word}`;
+    const URL = `${baseUrl}${searchWord}`;
 
     fetch(URL)
       .then((response) => response.json())
